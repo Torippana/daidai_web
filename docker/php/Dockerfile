@@ -17,3 +17,7 @@ RUN set -eux && \
   composer global require hirak/prestissimo
 RUN pecl install xdebug \
   && docker-php-ext-enable xdebug
+
+# nodejs install
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apk add --update nodejs nodejs-npm
